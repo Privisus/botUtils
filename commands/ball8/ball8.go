@@ -1,5 +1,5 @@
 /*	botUtils - A set of bot utilities for LINE chat bot.
-Copyright (C) 2016 Steven Hans
+Copyright (C) 2017 Steven Hans
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
