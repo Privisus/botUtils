@@ -32,8 +32,8 @@ var re *regexp.Regexp = regexp.MustCompile("(.*)\\s+\\(+(\\d+)\\)+")
 //ExecuteCommand finds a matching pattern for a potential command in a non-regex way and pick a suitable module to pass it to.
 func ExecuteCommand(args []string) {
 	if !cooldown() {
-		if startsWith("!", args) {
-			if endsWith("?", args) {
+		if StartsWith("!", args) {
+			if EndsWith("?", args) {
 				botUtils.Execute().Ball8(strings.Join(args, ""))
 				return
 			} else {
@@ -67,7 +67,7 @@ func ExecuteCommand(args []string) {
 					return
 				}
 			}
-		} else if startsWith("=", args) {
+		} else if StartsWith("=", args) {
 			botUtils.Execute().Latex(strings.Join(args, "")[1:])
 			return
 		} else {
@@ -96,11 +96,11 @@ func checkEqual(match, n string) bool {
 }
 
 //Checks if the very last character is equal to the provided match character.
-func endsWith(match string, args []string) bool {
+func EndsWith(match string, args []string) bool {
 	return checkEqual(match, args[len(args)-1][len(args[len(args)-1])-1:])
 }
 
 //Checks if the very first character is equal to the provided match character.
-func startsWith(match string, args []string) bool {
+func StartsWith(match string, args []string) bool {
 	return checkEqual(match, args[0][:1])
 }

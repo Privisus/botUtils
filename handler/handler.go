@@ -26,12 +26,21 @@ import (
 
 //Handles a command by passing it to a commandHandler with the arguments from Slice(..), a replytoken, and a client. The last two is given by the creator. The client will either be replying with a response message, or none (because of an error/nonexistent command).
 func HandleCommand(Command string) {
-	args := Slice(Command)
+	args := InsensitiveSlice(Command)
 
-	commandHandler.ExecuteCommand(args)
+	if commandHandler.StartsWith("=", args) {
+		commandHandler.ExecuteCommand(SensitiveSlice(Command))
+	} else {
+		commandHandler.ExecuteCommand(args)
+	}
 }
 
 //Splits the message into a potential command arguments that is separated based on whitespace. This also makes the command case-insensitive.
-func Slice(Command string) []string {
+func InsensitiveSlice(Command string) []string {
 	return strings.Split(strings.ToLower(Command), " ")
+}
+
+//Splits the message into a potential command arguments that is separated based on whitespace. The case of the command remains unchanged.
+func SensitiveSlice(Command string) []string {
+	return strings.Split(Command, " ")
 }
