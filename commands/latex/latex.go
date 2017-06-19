@@ -19,12 +19,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package latex
 
 import (
-	"botUtils/replyHandler"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
+
+	"github.com/Privisus/botUtils/replyHandler"
 
 	"github.com/line/line-bot-sdk-go/linebot"
 )

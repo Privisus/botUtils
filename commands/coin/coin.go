@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //Provides the result of a flipping coin.
 package coin
 
-import "botUtils/random"
-import "botUtils/replyHandler"
+import "github.com/Privisus/botUtils/random"
+import "github.com/Privisus/botUtils/replyHandler"
 import "github.com/line/line-bot-sdk-go/linebot"
 
 //Provides the result of a flipping coin. It generates a random number between 1 and 2 (inclusive). Will return "heads" if the value is 1, and "tails" if the value is 2, or otherwise, depending on the configuration.

@@ -19,10 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package dice
 
 import (
-	"botUtils/random"
 	"strconv"
+
+	"github.com/Privisus/botUtils/random"
 )
-import "botUtils/replyHandler"
+import "github.com/Privisus/botUtils/replyHandler"
 
 import "github.com/line/line-bot-sdk-go/linebot"
 

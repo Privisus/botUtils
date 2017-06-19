@@ -18,13 +18,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package botUtils
 
 import (
-	"botUtils/commands/ball8"
-	"botUtils/commands/coin"
-	"botUtils/commands/dice"
-	"botUtils/commands/latex"
-	"botUtils/commands/movies"
-	"botUtils/commands/quotes"
-	"botUtils/commands/weather"
+	"github.com/Privisus/botUtils/commands/ball8"
+	"github.com/Privisus/botUtils/commands/coin"
+	"github.com/Privisus/botUtils/commands/dice"
+	"github.com/Privisus/botUtils/commands/latex"
+	"github.com/Privisus/botUtils/commands/movies"
+	"github.com/Privisus/botUtils/commands/quotes"
+	"github.com/Privisus/botUtils/commands/weather"
 
 	"github.com/line/line-bot-sdk-go/linebot"
 )

@@ -21,10 +21,11 @@ package botUtils
 import (
 	"github.com/line/line-bot-sdk-go/linebot"
 
-	"botUtils/commands/ball8"
-	"botUtils/commands/quotes"
-	"botUtils/commands/weather"
-	"botUtils/random"
+	"github.com/Privisus/botUtils/commands/ball8"
+	"github.com/Privisus/botUtils/commands/movies"
+	"github.com/Privisus/botUtils/commands/quotes"
+	"github.com/Privisus/botUtils/commands/weather"
+	"github.com/Privisus/botUtils/random"
 )
 
 var Call Caller
@@ -35,6 +36,7 @@ var Call Caller
 func Initialize(Seed int64, botClient *linebot.Client) {
 	Call = NewCaller(botClient)
 	ball8.Initialize()
+	movies.Initialize()
 	quotes.Initialize()
 	weather.Initialize()
 	random.Initialize(Seed)

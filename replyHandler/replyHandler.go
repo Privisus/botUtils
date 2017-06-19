@@ -27,7 +27,7 @@ import (
 //Replies a message to the user with provided message(s).
 func ReplyMessage(ReplyToken string, Client *linebot.Client, Messages []linebot.Message) {
 	if _, err := Client.ReplyMessage(ReplyToken, Messages...).Do(); err != nil {
-		log.Print("Error replying message: ", nil)
+		log.Print("Error replying message: ", err)
 	}
 }
 

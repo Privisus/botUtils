@@ -19,7 +19,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package commandHandler
 
 import (
-	"botUtils"
+	"github.com/Privisus/botUtils"
 
 	"regexp"
 	"strings"

@@ -27,7 +27,7 @@ import (
 	"strconv"
 	"time"
 
-	"botUtils/replyHandler"
+	"github.com/Privisus/botUtils/replyHandler"
 
 	"github.com/line/line-bot-sdk-go/linebot"
 )

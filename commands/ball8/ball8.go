@@ -19,13 +19,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package ball8
 
 import (
-	"botUtils/replyHandler"
 	"crypto/sha1"
 	"encoding/hex"
 	"hash"
 	"io/ioutil"
 	"log"
 	"strings"
+
+	"github.com/Privisus/botUtils/replyHandler"
 
 	"github.com/line/line-bot-sdk-go/linebot"
 )
@@ -53,9 +54,9 @@ func Execute(Message string, ReplyToken string, Client *linebot.Client) {
 	replyHandler.ReplyMessage(ReplyToken, Client, []linebot.Message{linebot.NewTextMessage(choices[modulo_num%len(choices)])})
 }
 
-//Initializes the ball8 module; reading the choices file. usually this file is located in vendor/botUtils/commands/ball8/ball8.txt, but I think this hardcoding can be a little bit volatile.
+//Initializes the ball8 module; reading the choices file. usually this file is located in vendor/botUtils/commands/ball8/ball8.txt, but I think this hardcoding can be a little bit volatile (see?).
 func Initialize() {
-	file, err := ioutil.ReadFile("vendor/botUtils/commands/ball8/ball8.txt")
+	file, err := ioutil.ReadFile("Godeps/_workspace/src/github.com/Privisus/botUtils/commands/ball8/ball8.txt")
 	if err != nil {
 		log.Println("Error opening ball8.txt")
 	} else {
