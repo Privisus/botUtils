@@ -1,9 +1,10 @@
 # Configuration
 
-You'll need to configure these environment variables to ensure successful loading: `DARKSKY_TOKEN`, `LATLONGITUDE`, `CHANNEL_SECRET`, `CHANNEL_TOKEN`, `PORT`.
+You'll need to configure these environment variables to ensure successful loading: `DARKSKY_TOKEN`, `LATLONGITUDE`, `CHANNEL_SECRET`, `CHANNEL_TOKEN`, `PORT`, `MOVIE_TOKEN`.
 
-`DARKSKY_TOKEN` can be obtained from https://darksky.net/dev/.  
+`DARKSKY_TOKEN` can be obtained from darksky.net/dev/.  
 `LATLONGITUDE` is `"LATITUDE,LONGITUDE"`.  
+`MOVIE_TOKEN` can be obtained from themoviedb.org/.  
 `PORT` is without the `:` character.
 
 All environment variables are in string.
